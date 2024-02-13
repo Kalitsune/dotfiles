@@ -25,4 +25,6 @@ _darcs
 # This is the start of the user configuration. Add your ignore patern there:
 
 scripts
+assets
+
 .gitmodules
