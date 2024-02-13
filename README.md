@@ -23,9 +23,15 @@ just run:
 ```sh
 ./scripts/install-all.sh
 ```
+### Applications
+| Application | Name                                                          |
+|-------------|---------------------------------------------------------------|
+| Terminal    | [Blackbox](https://flathub.org/apps/com.raggesilver.BlackBox) |
+
 ## Screens
 ### Terminal
 ![Zsh with Oh My Zsh](./assets/terminal/Zsh.png)
+![Tmux with ZSH](./assets/terminal/Tmux.png)
 ### Editor
 ![neovim with NvChad a feature-rich vim configuration](./assets/terminal/NvChad.png)
 
