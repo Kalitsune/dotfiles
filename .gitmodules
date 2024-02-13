@@ -1,0 +1,9 @@
+[submodule "zsh-autosuggestions"]
+	path = .oh-my-zsh/custom/plugins/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions
+[submodule "zsh-syntax-highlighting"]
+	path = .oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting
+[submodule "cutefetch"]
+	path = .oh-my-zsh/bin/cutefetch
+	url = https://github.com/cybardev/cutefetch

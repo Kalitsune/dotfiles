@@ -1,0 +1,28 @@
+# Comments and blank lines are allowed.
+# This is the default STOW configuration. Do not edit:
+
+RCS
+.+,v
+
+CVS
+\.\#.+       # CVS conflict files / emacs lock files
+\.cvsignore
+
+\.svn
+_darcs
+\.hg
+
+\.git
+\.gitignore
+
+.+~          # emacs backup files
+\#.*\#       # emacs autosave files
+
+^/README.*
+^/LICENSE.*
+^/COPYING
+
+# This is the start of the user configuration. Add your ignore patern there:
+
+scripts
+.gitmodules
