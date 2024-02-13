@@ -30,6 +30,10 @@ local plugins = {
       ensure_installed = {},
       auto_install = true,
     }
-  }
+  },
+  {
+    "christoomey/vim-tmux-navigator",
+    lazy = false
+  },
 }
 return plugins
