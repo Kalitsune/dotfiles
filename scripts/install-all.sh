@@ -7,6 +7,7 @@ source $SCRIPT_DIR/utils/confirm.sh
 
 # Greet the user
 echo -e "${BLUE}Greetings! I'm going to install all of Kalitsune's dotfiles! just give me a bit...${BLANK}"
+$SCRIPT_DIR/update.sh
 
 # Start the specialised Install scripts
 
@@ -20,7 +21,6 @@ if confirm "${WARN} ⚠️  You choosed the full installation, any conflict will
     $SCRIPT_DIR/sync.sh
 else
     echo -e "${GREEN}✅ Skipped, please copy the config you'd like manually or using stow.${BLANK}"
-    $SCRIPT_DIR/update.sh
 fi
 
 # Say goodbye

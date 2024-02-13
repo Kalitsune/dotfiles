@@ -18,7 +18,7 @@ path+=("$HOME/.platformio/penv/bin")
 path+=("$HOME/.cargo/bin/")
 export PATH
 
-export EDITOR="lvim"
+export EDITOR="nvim"
 
 plugins=(
   git

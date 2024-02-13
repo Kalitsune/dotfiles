@@ -23,4 +23,9 @@ just run:
 ```sh
 ./scripts/install-all.sh
 ```
+## Screens
+### Terminal
+![Zsh with Oh My Zsh](./assets/terminal/Zsh.png)
+### Editor
+![neovim with NvChad a feature-rich vim configuration](./assets/terminal/NvChad.png)
 

@@ -10,8 +10,8 @@ echo -e "${BLUE}Setting up the terminal environment...${BLANK}"
 # install the packages
 source $SCRIPT_DIR/utils/packages-installer.sh
 
-deb_packages="npm zsh"
-rhl_packages="npm zsh"
+deb_packages="npm zsh neovim python3-neovim"
+rhl_packages="npm zsh neovim python3-neovim"
 
 if [[ "$1" == "--skip-packages" ]]; then
     echo -e "${WARN}Skipping package installation as the --skip-packages option is provided.${BLANK}"
@@ -26,3 +26,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 # install the pure theme
 echo -e "${NEUTRAL}Installing pure-prompt...${BLANK}"
 sudo npm install --global pure-prompt
+
+# install NvChad
+echo -e "${NEUTRAL}Installing NvChad...${BLANK}"
+git clone -q https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
