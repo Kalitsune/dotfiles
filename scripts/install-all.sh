@@ -19,6 +19,10 @@ $SCRIPT_DIR/install-terminal.sh $1
 if confirm "${WARN} ⚠️  You choosed the full installation, any conflict will end up in the erasure of your config files. Are you sure you want to proceed?${BLANK}"; then
     echo -e "${GREEN}Proceeding...${BLANK}"
     $SCRIPT_DIR/sync.sh
+
+    # Post install hooks
+    echo -e "${BLUE}Running post install hooks...${BLANK}"
+    $SCRIPT_DIR/post-setup-hooks.sh
 else
     echo -e "${GREEN}✅ Skipped, please copy the config you'd like manually or using stow.${BLANK}"
 fi
