@@ -21,7 +21,7 @@ fi
 
 # Install Oh-my-zsh:
 echo -e "${NEUTRAL}Installing Oh-my-zsh...${BLANK}"
-echo -e "${WARN}IMPORTANT: IF A SHELL OPENS AFTER FINALISING THE OH-MY-ZSH CONFIG PLEASE ENTER THE `exit` COMMAND${BLANK}"
+echo -e "${WARN}IMPORTANT: IF A SHELL OPENS AFTER FINALISING THE OH-MY-ZSH CONFIG PLEASE ENTER THE \`exit\` COMMAND${BLANK}"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 rm $HOME/.zshrc
 
