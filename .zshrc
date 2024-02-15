@@ -49,3 +49,4 @@ alias clear="clear && fetch"
 autoload -U promptinit; promptinit
 prompt pure
 
+eval "$(zoxide init --cmd cd zsh)"

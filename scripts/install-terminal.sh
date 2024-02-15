@@ -10,8 +10,8 @@ echo -e "${BLUE}Setting up the terminal environment...${BLANK}"
 # install the packages
 source $SCRIPT_DIR/utils/packages-installer.sh
 
-deb_packages="npm zsh thefuck autojump tealdeer fzf neovim python3-neovim tmux"
-rhl_packages="npm zsh thefuck autojump-zsh tealdeer fzf neovim python3-neovim tmux"
+deb_packages="npm zsh thefuck autojump tealdeer fzf neovim python3-neovim tmux zoxide"
+rhl_packages="npm zsh thefuck autojump-zsh tealdeer fzf neovim python3-neovim tmux zoxide"
 
 if [[ "$1" == "--skip-packages" ]]; then
     echo -e "${WARN}Skipping package installation as the --skip-packages option is provided.${BLANK}"
