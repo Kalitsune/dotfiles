@@ -42,7 +42,7 @@ fetch () {
 fetch
 
 # Example aliases
-alias zshconfig="lvim ~/.zshrc"
+alias zshconfig="nvim ~/.zshrc"
 alias fixyubikey="sudo systemctl restart pcscd.service"
 alias clear="clear && fetch"
 

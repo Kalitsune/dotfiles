@@ -8,8 +8,7 @@ local plugins = {
     lazy = false
   },
   {
-    'github/copilot.vim',
-    lazy = false
+    'github/copilot.vim'
   },
   {
     "neovim/nvim-lspconfig",
@@ -35,5 +34,9 @@ local plugins = {
     "christoomey/vim-tmux-navigator",
     lazy = false
   },
+  {
+    'rcarriga/nvim-notify',
+    lazy = false
+  }
 }
 return plugins
