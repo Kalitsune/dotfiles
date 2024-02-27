@@ -34,7 +34,11 @@ local plugins = {
     },
     opts = {
       ensure_installed = {
-        "svelte"
+        "svelte",
+        "javascript",
+        "typescript",
+        "html",
+        "css"
       },
       auto_install = true,
       autotag = { enable = true }

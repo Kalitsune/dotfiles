@@ -36,10 +36,10 @@ lspconfig.tsserver.setup {
   }
 }
 
--- lspconfig.svelte.setup {
---   on_attach = on_attach,
---   capabilities = capabilities,
---   init_options = {
---
---   }
--- }
+lspconfig.svelte.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  init_options = {
+
+  }
+}
