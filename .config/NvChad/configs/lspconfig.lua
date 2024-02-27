@@ -10,7 +10,7 @@ local lspconfig = require("lspconfig")
 --  filetypes = { 'rust' },
 --  root_dir = lspconfig.util.root_pattern("Cargo.toml"),
 -- })
--- 
+--
 
 local function organize_imports()
   local params = {
@@ -25,7 +25,7 @@ lspconfig.tsserver.setup {
   capabilities = capabilities,
   init_options = {
     preferences = {
-      disableSuggestions = true,
+  --     disableSuggestions = true,
     }
   },
   commands = {
@@ -36,3 +36,10 @@ lspconfig.tsserver.setup {
   }
 }
 
+-- lspconfig.svelte.setup {
+--   on_attach = on_attach,
+--   capabilities = capabilities,
+--   init_options = {
+--
+--   }
+-- }
