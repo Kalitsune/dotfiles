@@ -28,6 +28,19 @@ local plugins = {
     },
   },
   {
+    "nvim-treesitter/nvim-treesitter",
+    dependencies = {
+      { "windwp/nvim-ts-autotag" },
+    },
+    opts = {
+      ensure_installed = {
+        "svelte"
+      },
+      auto_install = true,
+      autotag = { enable = true }
+    }
+  },
+  {
     "mfussenegger/nvim-lint",
     event = "VeryLazy",
     config = function()
