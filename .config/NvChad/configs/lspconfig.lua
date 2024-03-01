@@ -36,18 +36,12 @@ lspconfig.tsserver.setup {
   }
 }
 
-lspconfig.svelte.setup {
-  on_attach = on_attach,
-  capabilities = capabilities,
-  init_options = {
+-- configless servers
+local servers = { "html", "cssls", "svelte"}
 
+for _, lsp in ipairs(servers) do
+  lspconfig[lsp].setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
   }
-}
-
-lspconfig.cssls.setup {
-  on_attach = on_attach,
-  capabilities = capabilities,
-  init_options = {
-
-  }
-}
+end
