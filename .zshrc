@@ -45,6 +45,7 @@ fetch
 alias zshconfig="nvim ~/.zshrc"
 alias fixyubikey="sudo systemctl restart pcscd.service"
 alias clear="clear && fetch"
+alias :q="exit"
 
 autoload -U promptinit; promptinit
 prompt pure

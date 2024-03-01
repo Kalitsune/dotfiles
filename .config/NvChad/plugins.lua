@@ -23,7 +23,8 @@ local plugins = {
       ensure_installed = {
         "eslint-lsp",
         "typescript-language-server",
-        "svelte-language-server"
+        "svelte-language-server",
+        "css-lsp"
       },
     },
   },

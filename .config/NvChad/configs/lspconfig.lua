@@ -43,3 +43,11 @@ lspconfig.svelte.setup {
 
   }
 }
+
+lspconfig.cssls.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  init_options = {
+
+  }
+}
