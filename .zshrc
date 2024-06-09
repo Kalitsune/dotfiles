@@ -12,6 +12,12 @@ export ZSH="$HOME/.oh-my-zsh"
 export XDG_CONFIG_HOME="$HOME/.config/"
 export XDG_DATA_HOME="$HOME/.local/share/"
 
+# ZSH History
+HISTFILE="$HOME/.zsh_history"
+HISTSIZE=10000
+SAVEHIST=10000
+setopt SHARE_HISTORY
+
 # $PATH configuration
 path+=("$HOME/.local/bin")
 path+=("$HOME/bin")
