@@ -30,6 +30,8 @@ export EDITOR="nvim"
 
 plugins=(
   git
+  gh
+  rust
   autojump
   thefuck
   aliases
