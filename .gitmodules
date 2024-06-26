@@ -7,9 +7,6 @@
 [submodule "cutefetch"]
 	path = .oh-my-zsh/bin/cutefetch
 	url = https://github.com/cybardev/cutefetch
-[submodule "neovim-NvChad"]
-	path = .config/nvim
-	url = https://github.com/NvChad/NvChad
 [submodule "tmux-TPM"]
 	path = .config/tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm

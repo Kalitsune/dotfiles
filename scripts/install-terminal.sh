@@ -11,7 +11,7 @@ echo -e "${BLUE}Setting up the terminal environment...${BLANK}"
 source $SCRIPT_DIR/utils/packages-installer.sh
 
 deb_packages="npm zsh thefuck autojump tealdeer fzf neovim python3-neovim tmux zoxide gh"
-rhl_packages="npm zsh thefuck autojump-zsh tealdeer fzf neovim python3-neovim tmux zoxide gh"
+rhl_packages="npm zsh thefuck autojump-zsh tealdeer fzf neovim python3-neovim tmux zoxide"
 
 if [[ "$1" == "--skip-packages" ]]; then
     echo -e "${WARN}Skipping package installation as the --skip-packages option is provided.${BLANK}"
@@ -27,3 +27,7 @@ rm $HOME/.zshrc
 # install the pure theme
 echo -e "${NEUTRAL}Installing pure-prompt...${BLANK}"
 sudo npm install --global pure-prompt
+
+# install NvChad
+git clone https://github.com/NvChad/starter $HOME/.config/nvim
+rm -rf $HOME/.config/nvim/lua/custom/
