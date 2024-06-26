@@ -30,4 +30,4 @@ sudo npm install --global pure-prompt
 
 # install NvChad
 git clone https://github.com/NvChad/starter $HOME/.config/nvim
-rm -rf $HOME/.config/nvim/lua/custom/
+rm -rf $HOME/.config/nvim/lua/

@@ -13,8 +13,7 @@ local plugins = {
   {
     "neovim/nvim-lspconfig",
     config = function ()
-      require("plugins.configs.lspconfig")
-      require("custom.configs.lspconfig")
+      require "configs.lspconfig"
     end
   },
   {
@@ -49,15 +48,15 @@ local plugins = {
     "mfussenegger/nvim-lint",
     event = "VeryLazy",
     config = function()
-      require('custom.configs.lint')
+      require 'configs.lint'
     end
   },
   {
-    "mhartington/formatter.nvim",
-    event = "VeryLazy",
-    opts = function()
-      return require "custom.configs.formatter"
-    end
+    "stevearc/conform.nvim",
+    event = 'BufWritePre',
+    config = function()
+      require "configs.conform"
+    end,
   },
   {
     "christoomey/vim-tmux-navigator",
@@ -69,3 +68,4 @@ local plugins = {
   }
 }
 return plugins
+
