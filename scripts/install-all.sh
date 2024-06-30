@@ -14,6 +14,16 @@ $SCRIPT_DIR/update.sh
 # start the installation of the terminal dependancies
 $SCRIPT_DIR/install-terminal.sh $1
 
+# Install GNU stow
+source $SCRIPT_DIR/utils/packages-installer.sh
+deb_packages="stow"
+rhl_packages="stow"
+
+if [[ "$1" == "--skip-packages" ]]; then
+    echo -e "${WARN}Skipping package installation as the --skip-packages option is provided.${BLANK}"
+else
+    install_packages "$deb_packages" "$rhl_packages"
+fi
 
 # install the configs ⚠️  will override everything, this is a complete installation
 if confirm "${WARN} ⚠️  You choosed the full installation, any conflict will end up in the erasure of your config files. Are you sure you want to proceed?${BLANK}"; then
