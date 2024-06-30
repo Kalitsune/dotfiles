@@ -29,5 +29,12 @@ echo -e "${NEUTRAL}Installing pure-prompt...${BLANK}"
 sudo npm install --global pure-prompt
 
 # install NvChad
+echo -e "${NEUTRAL}Installing NvChad...${BLANK}"
 git clone https://github.com/NvChad/starter $HOME/.config/nvim
 rm -rf $HOME/.config/nvim/lua/
+
+# install NerdFont
+echo -e "${NEUTRAL}Installing JetBrainsMono (NerdFont)...${BLANK}"
+mkdir -p "$HOME/.local/share/fonts" 
+curl -fLo "$HOME/.local/share/fonts/Jetbrains Mono NerdFont.otf" \
+https://github.com/ryanoasis/nerd-fonts/raw/HEAD/patched-fonts/JetBrainsMono/Ligatures/Regular/JetBrainsMonoNerdFont-Regular.ttf
