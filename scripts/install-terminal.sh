@@ -31,7 +31,7 @@ sudo npm install --global pure-prompt
 # install NvChad
 echo -e "${NEUTRAL}Installing NvChad...${BLANK}"
 git clone https://github.com/NvChad/starter $HOME/.config/nvim
-rm -rf $HOME/.config/nvim/lua/
+if ! [ -f $HOME/.config/nvim/lua/.kalidotfiles ]; then rm -rf $HOME/.config/nvim/lua/; fi
 
 # install NerdFont
 echo -e "${NEUTRAL}Installing JetBrainsMono (NerdFont)...${BLANK}"

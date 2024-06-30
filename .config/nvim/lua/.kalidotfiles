@@ -1,0 +1,3 @@
+Repo: https://github.com/kalitsune/dotfiles
+
+This file is of no importance, it just prevents the installation script from deleting this direectory if it is ran again.
