@@ -2,16 +2,9 @@
 -- https://github.com/NvChad/ui/blob/v2.5/lua/nvconfig.lua
 
 ---@type ChadrcConfig
-local M = {}
-
-M.ui = {
-  theme = 'catppuccin',
-
-
-	-- hl_override = {
-	-- 	Comment = { italic = true },
-	-- 	["@comment"] = { italic = true },
-	-- },
+local Config = {
+  base64 = {
+    theme = "catppuccin"
+  }
 }
-
-return M
+return Config
