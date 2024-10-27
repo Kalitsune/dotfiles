@@ -38,3 +38,6 @@ echo -e "${NEUTRAL}Installing JetBrainsMono (NerdFont)...${BLANK}"
 mkdir -p "$HOME/.local/share/fonts" 
 curl -fLo "$HOME/.local/share/fonts/Jetbrains Mono NerdFont.otf" \
 https://github.com/ryanoasis/nerd-fonts/raw/HEAD/patched-fonts/JetBrainsMono/Ligatures/Regular/JetBrainsMonoNerdFont-Regular.ttf
+
+# disable the native gnome emoji picker
+dconf write /desktop/ibus/panel/emoji/hotkey "@as []"
