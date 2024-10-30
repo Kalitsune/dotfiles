@@ -41,3 +41,6 @@ https://github.com/ryanoasis/nerd-fonts/raw/HEAD/patched-fonts/JetBrainsMono/Lig
 
 # disable the native gnome emoji picker
 dconf write /desktop/ibus/panel/emoji/hotkey "@as []"
+
+# install dash, a gh extension
+gh extension install dlvhdr/gh-dash
