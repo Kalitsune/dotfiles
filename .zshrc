@@ -49,7 +49,8 @@ fetch () {
 }
 fetch
 
-# Example aliases
+# aliases
+source $HOME/.aliases
 alias zshconfig="nvim ~/.zshrc"
 alias fixyubikey="sudo systemctl restart pcscd.service"
 alias clear="clear && fetch"
@@ -60,3 +61,9 @@ autoload -U promptinit; promptinit
 prompt pure
 
 eval "$(zoxide init --cmd cd zsh)"
+
+# completions
+autoload -U compinit
+compinit
+
+eval "$(register-python-argcomplete --no-defaults exegol)"
