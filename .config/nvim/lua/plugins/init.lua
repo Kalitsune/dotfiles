@@ -8,9 +8,6 @@ local plugins = {
     lazy = false
   },
   {
-    'github/copilot.vim'
-  },
-  {
     "neovim/nvim-lspconfig",
     config = function ()
       require "configs.lspconfig"

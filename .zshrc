@@ -53,7 +53,7 @@ fetch
 source $HOME/.aliases
 alias zshconfig="nvim ~/.zshrc"
 alias fixyubikey="sudo systemctl restart pcscd.service"
-alias exegol="sudo -E HOME=$USER $(which exegol)"
+alias exegol="sudo -E HOME=$HOME $(which exegol)"
 alias clear="clear && fetch"
 alias ls="lsd"
 alias :q="exit"
