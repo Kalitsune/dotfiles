@@ -55,6 +55,7 @@ alias zshconfig="nvim ~/.zshrc"
 alias fixyubikey="sudo systemctl restart pcscd.service"
 alias clear="clear && fetch"
 alias ls="lsd"
+alias exegol="sudo -E $(which exegol)"
 alias :q="exit"
 
 autoload -U promptinit; promptinit
