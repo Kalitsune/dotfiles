@@ -1,5 +1,4 @@
 # Kalitsune's .dotfiles
-
 ## What are dotfiles?
 Dotfiles are configuration files on Unix-like systems that are typically hidden and prefixed with a dot (e.g., .bashrc, .vimrc). These files store settings and preferences for various command-line tools, text editors, and other applications, allowing users to customize their environment to suit their needs.
 
@@ -35,3 +34,6 @@ just run:
 ### Editor
 ![neovim with NvChad a feature-rich vim configuration](./assets/terminal/NvChad.png)
 
+
+<br/><br/>
+*also: check out [Kalitsune/wallpapers](https://github.com/Kalitsune/wallpapers) 😜*
