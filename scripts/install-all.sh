@@ -11,11 +11,11 @@ $SCRIPT_DIR/update.sh
 
 # Start the specialised Install scripts
 
-# start the installation of the terminal dependancies
-$SCRIPT_DIR/install-terminal.sh $1
-
 # start the instlalation of programing languages related dependancies
 $SCRIPT_DIR/install_lang.sh
+
+# start the installation of the terminal dependancies
+$SCRIPT_DIR/install-terminal.sh $1
 
 # start the installation of exegol (& docker)
 $SCRIPT_DIR/install_exegol.sh

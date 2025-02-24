@@ -19,6 +19,9 @@ else
     install_packages "$deb_packages" "$rhl_packages"
 fi
 
+# install doist, a todoist cli client
+cargo install doist
+
 # Install Oh-my-zsh:
 echo -e "${NEUTRAL}Installing Oh-my-zsh...${BLANK}"
 RUNZSH="no" CHSH="yes" KEEP_ZSHRC="yes" sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"

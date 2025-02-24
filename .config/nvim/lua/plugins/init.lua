@@ -66,6 +66,9 @@ local plugins = {
   {
     'rcarriga/nvim-notify',
     lazy = false
+  },
+  {
+    'MeanderingProgrammer/render-markdown.nvim',
   }
 }
 return plugins
