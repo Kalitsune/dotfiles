@@ -12,13 +12,16 @@ $SCRIPT_DIR/update.sh
 # Start the specialised Install scripts
 
 # start the instlalation of programing languages related dependancies
-$SCRIPT_DIR/install_lang.sh
+$SCRIPT_DIR/install-lang.sh $1 
 
 # start the installation of the terminal dependancies
 $SCRIPT_DIR/install-terminal.sh $1
 
 # start the installation of exegol (& docker)
-$SCRIPT_DIR/install_exegol.sh
+$SCRIPT_DIR/install-exegol.sh $1
+
+# start the installation of hyprland
+$SCRIPT_DIR/install-hyprland.sh $1
 
 # Install GNU stow
 source $SCRIPT_DIR/utils/packages-installer.sh
