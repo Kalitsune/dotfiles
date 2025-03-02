@@ -3,7 +3,7 @@ import { Widget } from "astal/gtk3"
 
 import Battery from "gi://AstalBattery"
 
-import {getBatteryIcon} from "../utils/battery"
+import {getBatteryIconName} from "./battery-utils"
 
 export function BatteryWidget(css: string) {
     const battery = Battery.get_default()
@@ -16,31 +16,28 @@ export function BatteryWidget(css: string) {
 
     const batteryVar = Variable.derive([
         bind(battery, "percentage"),
-        bind(battery, "state")
+        bind(battery, "batteryIconName")
     ])
 
-    return new Widget.Label({
-        css,
-        className: batteryVar(value => {
-            if (value[0] > 0.04 || battery.state === Battery.State.CHARGING) {
-                if (batteryWarningInterval != null) {
-                    batteryWarningInterval.destroy()
-                    batteryWarningInterval = null
-                }
-                return "iconButton"
-            } else {
-                if (batteryWarningInterval === null && battery.isBattery) {
-                    batteryWarningInterval = setInterval(() => {
-                        warningSound()
-                    }, 120_000)
-                    warningSound()
-                }
-                return "warningIconButton"
-            }
+    return new Widget.Box(
+        {
+            spacing: 10
+        }, 
+        new Widget.Icon({
+            icon: batteryVar(_ => battery.batteryIconName),            
         }),
-        label: batteryVar(() => getBatteryIcon(battery) + " " + Math.round(battery.percentage * 100) + "%"),
-        visible: bind(battery, "isBattery")
-    })
+        new Widget.Box(
+            {
+                spacing: 5
+            },
+            new Widget.Label({
+                css,
+                label: batteryVar(_ => Math.round(battery.percentage * 100).toString()),
+                visible: bind(battery, "isBattery")
+            }),
+            new Widget.Label({label: "%"}),
+        )
+    )
 }
 
 export function TimeWidget(css: string) {
@@ -51,7 +48,8 @@ export function TimeWidget(css: string) {
             css: css,
             label: time(_ =>
                 new Date().getHours()
-                + (new Date().getSeconds() % 2 ? " " : ":") 
+                + (new Date().getSeconds() % 2 ? " " : ":") // blinking : 
+                + (new Date().getMinutes() < 10 ? "0" : "") // to add a zero to single digits
                 + new Date().getMinutes()
                 +  " 🕗"
             ) 

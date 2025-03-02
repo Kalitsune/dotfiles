@@ -23,6 +23,8 @@ export default function Bar(gdkmonitor: Gdk.Monitor) {
                 className: "window",
                 css: `
                     padding: 2px;
+                    padding-left: 15px;
+                    padding-right: 15px;
                     min-height: 30px;
                 `,
             },

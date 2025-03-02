@@ -16,7 +16,7 @@ else
     # install hyprland & its components
     sudo dnf copr enable -qy erikreider/SwayNotificationCenter
     sudo dnf copr enable -qy solopasha/hyprland
-    sudo dnf install -qy hyprland SwayNotificationCenter mate-polkit qt5-qtwayland qt6-qtwayland aylurs-gtk-shell2 
+    sudo dnf install -qy hyprland hyprlock hypridle SwayNotificationCenter mate-polkit qt5-qtwayland qt6-qtwayland aylurs-gtk-shell2 
 
     # make a temp build directory
     BUILD_DIR="/tmp/kdotfiles"
