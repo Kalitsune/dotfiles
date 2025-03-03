@@ -1,18 +1,15 @@
 import {bind, Variable} from "astal"
 import { Widget } from "astal/gtk3"
 
+import Hyprland from "gi://AstalHyprland"
 import Battery from "gi://AstalBattery"
 
-import {getBatteryIconName} from "./battery-utils"
+export function WorkspaceWidget(css: string) {
+    const hyprland = Hyprland.get_default();
+}
 
 export function BatteryWidget(css: string) {
     const battery = Battery.get_default()
-
-    let batteryWarningInterval: GLib.Source | null = null
-
-    function warningSound() {
-        execAsync('bash -c "play $HOME/.config/hypr/assets/sounds/battery-low.ogg"')
-    }
 
     const batteryVar = Variable.derive([
         bind(battery, "percentage"),
@@ -21,6 +18,7 @@ export function BatteryWidget(css: string) {
 
     return new Widget.Box(
         {
+            css,
             spacing: 10
         }, 
         new Widget.Icon({
@@ -31,7 +29,6 @@ export function BatteryWidget(css: string) {
                 spacing: 5
             },
             new Widget.Label({
-                css,
                 label: batteryVar(_ => Math.round(battery.percentage * 100).toString()),
                 visible: bind(battery, "isBattery")
             }),

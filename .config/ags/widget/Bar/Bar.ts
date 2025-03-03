@@ -8,7 +8,16 @@ import {
 
 export default function Bar(gdkmonitor: Gdk.Monitor) {
     const { TOP, LEFT, RIGHT } = Astal.WindowAnchor
-    let widgetCss = "";
+    let widgetCss = `
+        background: #1e1e2e;
+        border-radius: 10px;
+        margin: 8px;
+
+        padding-left:   20px;
+        padding-right:  20px;
+        padding-top:    6px;
+        padding-bottom: 6px;
+    `;
 
     return new Widget.Window(
         {
