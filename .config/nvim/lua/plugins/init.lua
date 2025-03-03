@@ -57,6 +57,14 @@ local plugins = {
     end
   },
   {
+    "hrsh7th/nvim-cmp",
+    opts = {
+        sources = require("cmp").config.sources({
+            { name = 'render-markdown' },
+        }),
+    }  
+  },
+  {
     "stevearc/conform.nvim",
     event = 'BufWritePre',
     config = function()
@@ -68,12 +76,18 @@ local plugins = {
     lazy = false
   },
   {
-    'rcarriga/nvim-notify',
-    lazy = false
+    'rcarriga/nvim-notify'
   },
   {
     'MeanderingProgrammer/render-markdown.nvim',
-  }
+    lazy = false
+  },
+  {
+    "folke/twilight.nvim",
+  },
+  {
+    "folke/zen-mode.nvim",
+  },
 }
 return plugins
 

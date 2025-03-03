@@ -35,6 +35,8 @@ sudo npm install --global pure-prompt
 echo -e "${NEUTRAL}Installing NvChad...${BLANK}"
 git clone https://github.com/NvChad/starter $HOME/.config/nvim
 if ! [ -f $HOME/.config/nvim/lua/.kalidotfiles ]; then rm -rf $HOME/.config/nvim/lua/; fi
+# install the french language pack 
+curl https://github.com/thjbdvlt/spell-fr.vim/releases/download/v0.1.0/fr.utf-8.spl -o $HOME/.config/nvim/fr-utf-8.spl
 
 # install NerdFont
 echo -e "${NEUTRAL}Installing JetBrainsMono (NerdFont)...${BLANK}"
