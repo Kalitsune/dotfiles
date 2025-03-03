@@ -22,7 +22,8 @@ case "$1" in
     fi
     ;;
   "")
-    bash $0 list | anyrun --hide-plugin-info true --show-results-immediately true --plugins libstdin.so | awk '{print $1}' | wl-copy ;;
+    bash $0 list | anyrun --hide-plugin-info true --show-results-immediately true --plugins libstdin.so | awk '{print $1}' | tr -d '\n' | wl-copy  
+    ;;
 esac
 
 exit
