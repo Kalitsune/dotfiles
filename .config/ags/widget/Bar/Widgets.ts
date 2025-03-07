@@ -1,4 +1,4 @@
-import {bind, Variable} from "astal"
+import { bind, Variable } from "astal"
 import { Widget } from "astal/gtk3"
 
 import Hyprland from "gi://AstalHyprland"
@@ -20,9 +20,9 @@ export function BatteryWidget(css: string) {
         {
             css,
             spacing: 10
-        }, 
+        },
         new Widget.Icon({
-            icon: batteryVar(_ => battery.batteryIconName),            
+            icon: batteryVar(_ => battery.batteryIconName),
         }),
         new Widget.Box(
             {
@@ -32,7 +32,7 @@ export function BatteryWidget(css: string) {
                 label: batteryVar(_ => Math.round(battery.percentage * 100).toString()),
                 visible: bind(battery, "isBattery")
             }),
-            new Widget.Label({label: "%"}),
+            new Widget.Label({ label: "%" }),
         )
     )
 }
@@ -40,18 +40,20 @@ export function BatteryWidget(css: string) {
 export function TimeWidget(css: string) {
     const time = Variable("").poll(1000, "date")
 
+    let date;
     return new Widget.Label(
         {
             css: css,
-            label: time(_ =>
-                new Date().getHours()
-                + (new Date().getSeconds() % 2 ? " " : ":") // blinking : 
-                + (new Date().getMinutes() < 10 ? "0" : "") // to add a zero to single digits
-                + new Date().getMinutes()
-                +  " 🕗"
-            ) 
+            label: time(_ => {
+                date = new Date();
+                return date.getHours()
+                    + (date.getSeconds() % 2 ? " " : ":") // blinking : 
+                    + (date.getMinutes() < 10 ? "0" : "") // to add a zero to single digits
+                    + date.getMinutes()
+                    + " 🕗"
+            })
         }
-    ) 
+    )
 }
 
 export function DateWidget(css: string) {
@@ -61,11 +63,11 @@ export function DateWidget(css: string) {
         {
             css: css,
             label: time(_ => new Date().toLocaleDateString("en-US", {
-                    month: "short",
-                    day: "numeric",
-                }) +  " 📅"
-            ) 
+                month: "short",
+                day: "numeric",
+            }) + " 📅"
+            )
         }
-    ) 
+    )
 }
 
