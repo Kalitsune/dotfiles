@@ -3,7 +3,7 @@ local lspconfig = require("lspconfig")
 
 nvlsp.defaults() -- loads nvchad's defaults
 
-local servers = { "html", "cssls", "matlab_ls", "ts_ls", "svelte" }
+local servers = { "html", "cssls", "matlab_ls", "ts_ls", "svelte", "rust_analyzer" }
 
 -- lsps with default config
 for _, lsp in ipairs(servers) do
