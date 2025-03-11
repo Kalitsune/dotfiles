@@ -10,3 +10,6 @@
 [submodule "tmux-TPM"]
 	path = .config/tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
+[submodule ".config/swww/wallpapers"]
+	path = .config/swww/wallpapers
+	url = https://github.com/kalitsune/wallpapers
