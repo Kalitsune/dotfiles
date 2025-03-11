@@ -1,0 +1,11 @@
+[Unit]
+Description=Update hyprsunset
+
+[Service]
+ExecStart=/bin/bash %h/.config/hypr/hyprsunset/update.sh
+Restart=always
+RuntimeMaxSec=3600
+Type=simple
+
+[Install]
+WantedBy=default.target
