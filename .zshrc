@@ -18,12 +18,16 @@ HISTSIZE=10000
 SAVEHIST=10000
 setopt SHARE_HISTORY
 
+# Language related stuff
+export DOTNET_ROOT="$HOME/.dotnet/"
+
 # $PATH configuration
 path+=("$HOME/.local/bin")
 path+=("$HOME/bin")
 path+=("$HOME/.local/bin/platform-tools")
 path+=("$HOME/.platformio/penv/bin")
 path+=("$HOME/.cargo/bin/")
+path+=("$DOTNET_ROOT")
 export PATH
 
 export EDITOR="nvim"

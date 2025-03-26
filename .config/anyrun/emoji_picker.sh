@@ -685,6 +685,7 @@ __DATA__
 ☂️ Umbrella
 ☔ Umbrella with Rain Drops
 ⚡ High Voltage
+⚡ Zap
 ❄️ Snowflake
 ☃️ Snowman
 ⛄ Snowman Without Snow
@@ -1111,6 +1112,7 @@ __DATA__
 🪅 Piñata
 🪆 Nesting Dolls
 🖼️ Framed Picture
+🖼️ Painting
 🧵 Thread
 🪡 Sewing Needle
 🧶 Yarn
@@ -1148,7 +1150,9 @@ __DATA__
 📽️ Film Projector
 📺 Television
 📷 Camera
+📷 Photo
 📸 Camera with Flash
+📸 Photo with Flash
 📹 Video Camera
 📼 Videocassette
 🔍 Magnifying Glass Tilted Left
