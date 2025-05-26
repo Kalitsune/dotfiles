@@ -437,7 +437,9 @@ __DATA__
 👩‍👧‍👧 Family: Woman, Girl, Girl
 🗣️ Speaking Head
 👤 Bust in Silhouette
+👤 Account 
 👥 Busts in Silhouette
+👥 Accounts 
 🫂 People Hugging
 👣 Footprints
 🧳 Luggage
@@ -598,6 +600,7 @@ __DATA__
 🐟 Fish
 🐠 Tropical Fish
 🐡 Blowfish
+🪼 Jellyfish
 🦈 Shark
 🐙 Octopus
 🐚 Spiral Shell

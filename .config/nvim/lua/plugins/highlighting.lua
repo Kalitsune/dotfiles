@@ -11,10 +11,15 @@ local plugin = {
 				"typescript",
 				"html",
 				"css",
+				"markdown",
+				"markdown_inline",
 			},
 			auto_install = true,
 			autotag = { enable = true },
 		},
+		config = function()
+			require("configs.highlighting")
+		end,
 	},
 }
 return plugin
