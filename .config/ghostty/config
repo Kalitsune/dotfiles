@@ -1,2 +1,50 @@
+# Appearance
 theme = rose-pine
 window-decoration = none
+gtk-tabs-location = hidden
+
+# Keybinds (I'm a former tmux user)
+## Tabs
+### Control
+keybind = ctrl+shift+space>c=new_tab 
+keybind = ctrl+shift+space>x=close_tab 
+keybind = ctrl+shift+space>n=next_tab 
+keybind = ctrl+shift+space>p=previous_tab 
+keybind = ctrl+shift+space>w=toggle_tab_overview 
+
+## Seek specific tab
+# keybind = ctrl+shift+space>1=goto_tab:1 
+# keybind = ctrl+shift+space>2=goto_tab:2 
+# keybind = ctrl+shift+space>3=goto_tab:3 
+# keybind = ctrl+shift+space>4=goto_tab:4 
+# keybind = ctrl+shift+space>5=goto_tab:5 
+# keybind = ctrl+shift+space>6=goto_tab:6 
+# keybind = ctrl+shift+space>7=goto_tab:7 
+# keybind = ctrl+shift+space>8=goto_tab:8 
+# keybind = ctrl+shift+space>9=goto_tab:9 
+# keybind = ctrl+shift+space>10=goto_tab:10 
+
+## Splits
+### Creation
+keybind = ctrl+shift+space>ù>right=new_split:right 
+keybind = ctrl+shift+space>ù>left=new_split:left 
+keybind = ctrl+shift+space>ù>up=new_split:up
+keybind = ctrl+shift+space>ù>down=new_split:down 
+### Navigation
+keybind = ctrl+shift+space>right=goto_split:right 
+keybind = ctrl+shift+space>left=goto_split:left 
+keybind = ctrl+shift+space>up=goto_split:up
+keybind = ctrl+shift+space>down=goto_split:down 
+### Resizing
+keybind = ctrl+shift+space>b>right=resize_split:right,10
+keybind = ctrl+shift+space>b>left=resize_split:left,10
+keybind = ctrl+shift+space>b>up=resize_split:up,10
+keybind = ctrl+shift+space>b>down=resize_split:down,10 
+### Misc
+keybind = ctrl+shift+space>equal=toggle_split_zoom 
+
+# Misc
+keybind = ctrl+shift+space>escape=inspector:toggle
+keybind = ctrl+shift+space>r=reload_config
+# keybind = global:alt+space=toggle_quick_terminal # MacOS only
+
