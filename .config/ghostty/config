@@ -7,7 +7,6 @@ gtk-tabs-location = hidden
 ## Tabs
 ### Control
 keybind = ctrl+shift+space>c=new_tab 
-keybind = ctrl+shift+space>x=close_tab 
 keybind = ctrl+shift+space>n=next_tab 
 keybind = ctrl+shift+space>p=previous_tab 
 keybind = ctrl+shift+space>w=toggle_tab_overview 
@@ -42,6 +41,7 @@ keybind = ctrl+shift+space>b>up=resize_split:up,10
 keybind = ctrl+shift+space>b>down=resize_split:down,10 
 ### Misc
 keybind = ctrl+shift+space>equal=toggle_split_zoom 
+keybind = ctrl+shift+space>x=close_surface 
 
 # Misc
 keybind = ctrl+shift+space>escape=inspector:toggle
