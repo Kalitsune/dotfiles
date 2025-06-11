@@ -36,7 +36,6 @@ plugins=(
   git
   gh
   rust
-  autojump
   thefuck
   aliases
   kubectl
