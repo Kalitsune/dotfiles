@@ -1,2 +1,8 @@
 alias ll="ls -la"
 alias la="ls -a"
+
+alias gs="git status"
+alias gpf="git push --force-with-lease"
+alias gpt="git push --follow-tags"
+alias gptf="git push --force-with-lease --follow-tags"
+alias gpft="gptf"
