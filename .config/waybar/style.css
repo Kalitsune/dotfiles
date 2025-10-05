@@ -113,14 +113,10 @@ window#waybar {
   border: 1px solid @black;
 }
 
-#custom-hyprpicker,
-#bluetooth,
 #network,
-#pulseaudio,
+#custom-touchscreen,
 #backlight,
-#custom-notifications,
-#custom-power,
-#custom-screenshot_t {
+#pulseaudio {
   color: #7f849c;
   font-family: "Symbols Nerd Font";
   font-size: 10pt;
@@ -128,23 +124,8 @@ window#waybar {
   padding: 0 10px;
 }
 
-/* #custom-hyprpicker { */
-/*   background: linear-gradient(to left, transparent, @black); */
-/*   border-radius: 100px 0 0 100px; */
-/*   border-top: solid 3px transparent; */
-/*   border-bottom: solid 3px transparent; */
-/*   padding-left: 15px; */
-/* } */
-
-#bluetooth.connected {
-  color: #a6adc8;
-}
-
-#bluetooth.off {
-  color: @brblack;
-}
-
-#pulseaudio.muted {
+#pulseaudio.muted,
+#custom-touchscreen.disabled {
   color: @brblack;
 }
 

@@ -27,6 +27,7 @@ path+=("$HOME/bin")
 path+=("$HOME/.local/bin/platform-tools")
 path+=("$HOME/.platformio/penv/bin")
 path+=("$HOME/.cargo/bin/")
+path+=("$HOME/go/bin/")
 path+=("$HOME/.dotnet/tools")
 path+=("$DOTNET_ROOT")
 export PATH

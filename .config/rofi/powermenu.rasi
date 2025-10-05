@@ -1,0 +1,40 @@
+/**
+ * ROFI Color theme
+ * User: Habib
+ * Copyright: JuJu Ashbe !!
+*/
+
+@theme "~/.config/rofi/themes/rounded.rasi"
+
+window {
+    width: 35%;
+    location: center;
+    border-radius:0px;
+    background-color:@dark;
+    children: [listview];
+}
+
+listview {
+    border:0px;
+    padding:1px;
+    margin:1px;
+    columns:4;
+    lines:1;
+    cycle:false;
+}
+
+element {
+    margin:3px;
+    padding:15px;
+    background-color:@green;
+}
+
+element-text {
+    text-color:                  inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.5;
+}
+
+element selected {
+    background-color: @red;
+}

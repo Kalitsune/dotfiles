@@ -11,18 +11,18 @@
       "hyprland/workspaces"
    ],
    "modules-center":[
-      "custom/playerlabel",
+      "custom/notifications",
       "clock"
    ],
    "modules-right":[
+      "tray",
       "group/group-applets",
       "battery"
    ],
    "clock":{
-      "format":"{:%H:%M:%S}",
+      "format":"⏰ {:%H:%M   📅 %b %d}",
       "interval":1,
-      "tooltip":"false",
-      "format-alt":"{:%d/%m/%Y}"
+      "tooltip":"false"
    },
    "hyprland/workspaces":{
       "disable-scroll":false,
@@ -71,30 +71,13 @@
       ],
       "interval":1
    },
-   "memory":{
-      "format":"󰍛 {}%",
-      "format-alt":"󰍛 {used}/{total} GiB",
-      "interval":1
-   },
-   "cpu":{
-      "format":"󰻠  {usage}%",
-      "format-alt":"󰻠  {avg_frequency} GHz",
-      "interval":1
-   },
-   "disk":{
-      "format":"󰆼 {percentage_used}%",
-      "format-alt":"󰆼 {used}/{total} GiB",
-      "interval":1,
-      "path":"/"
-   },
    "network":{
       "format-wifi":"󰤨",
       "format-ethernet":"󰈀",
       "format-linked":"󰈀",
       "format-disconnected":"󰤭",
       "format-alt":"󰈀: {ipaddr}/{cidr}",
-      "tooltip-format":"{essid}",
-      "on-click-right":"python ~/.config/rofi/network/network.py"
+      "tooltip-format":"{essid}"
    },
    "bluetooth":{
       "format-on":"󰂯",
@@ -132,9 +115,24 @@
       "on-click-right":"swaync-client -d -sw",
       "escape":true
    },
+   "custom/touchscreen": {
+       "format": "{icon}", // The special {icon} placeholder is used here
+       "exec": "~/.config/waybar/scripts/toggle_touchscreen.sh",
+       "on-click": "~/.config/waybar/scripts/toggle_touchscreen.sh toggle && pkill -RTMIN+8 waybar",
+       "interval": 3600,
+       "tooltip": false,
+       "format-icons": {
+         "enabled": "󰅶",    // If script outputs "enabled", use this icon
+         "disabled": "󰾪", // If script outputs "disabled", use this one
+         "default": "󰾪"      // Optional: An icon for any other output
+       }
+   },
    "tray":{
       "icon-size":16,
-      "spacing":5
+      "spacing":5,
+      "icons": {
+        "Nextcloud": "bluetooth"
+      }
    },
    "backlight":{
       "device":"acpi_video1",
@@ -164,31 +162,13 @@
       "on-click-right":"pavucontrol",
       "tooltip-format":"{volume}%"
    },
-   "custom/launcher":{
-      "format":" ",
-      "on-click":"exec pkill anyrun || anyrun",
-      "on-click-right":"exec pkill anyrun || anyrun"
-   },
-   "custom/wf-recorder":{
-      "format":"{}",
-      "interval":"once",
-      "exec":"echo ''",
-      "tooltip":"false",
-      "exec-if":"pgrep 'wf-recorder'",
-      "on-click":"exec ./scripts/wlrecord.sh",
-      "signal":8
-   },
-   "custom/power":{
-      "format":" 󰐥 ",
-      "tooltip":false,
-      "on-click":"shutdown now"
-   },
    "group/group-applets":{
       "orientation":"inherit",
       "modules":[
          "pulseaudio",
          "backlight",
-         "custom/power"
+         "custom/touchscreen",
+         "network"
       ]
    }
 }
