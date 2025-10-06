@@ -15,7 +15,6 @@
       "clock"
    ],
    "modules-right":[
-      "tray",
       "group/group-applets",
       "battery"
    ],

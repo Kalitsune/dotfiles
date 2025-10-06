@@ -25,20 +25,6 @@ window#waybar {
   border: 1px solid @black;
 }
 
-#workspaces button {
-  border-radius: 0px;
-  color: @white;
-  /* transition: all 0.25s ease-in-out; */
-}
-
-#workspaces button.persistent {
-  color: @white;
-}
-
-#workspaces button.empty {
-  color: @brblack;
-}
-
 #workspaces button.active {
   color: #7f849c;
   text-shadow:
