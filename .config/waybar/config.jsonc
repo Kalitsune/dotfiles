@@ -11,8 +11,7 @@
       "hyprland/workspaces"
    ],
    "modules-center":[
-      "custom/notifications",
-      "clock"
+       "group/group-clock"
    ],
    "modules-right":[
       "group/group-applets",
@@ -114,17 +113,31 @@
       "on-click-right":"swaync-client -d -sw",
       "escape":true
    },
-   "custom/touchscreen": {
+   "custom/caffeine": {
        "format": "{icon}", // The special {icon} placeholder is used here
-       "exec": "~/.config/waybar/scripts/toggle_touchscreen.sh",
-       "on-click": "~/.config/waybar/scripts/toggle_touchscreen.sh toggle && pkill -RTMIN+8 waybar",
-       "interval": 3600,
-       "tooltip": false,
+       "exec": "~/.config/waybar/scripts/caffeine.sh",
+       "on-click": "~/.config/waybar/scripts/caffeine.sh toggle",
+       "interval": 1,
        "format-icons": {
          "enabled": "󰅶",    // If script outputs "enabled", use this icon
          "disabled": "󰾪", // If script outputs "disabled", use this one
          "default": "󰾪"      // Optional: An icon for any other output
-       }
+       },
+       "return-type": "json"
+   },
+   "custom/touchscreen": {
+       "format": "{icon}", // The special {icon} placeholder is used here
+       "exec": "~/.config/waybar/scripts/toggle_touchscreen.sh",
+       "on-click": "~/.config/waybar/scripts/toggle_touchscreen.sh toggle",
+       "interval": 3600,
+       "tooltip": false,
+       "format-icons": {
+         "enabled": "󰹇",    // If script outputs "enabled", use this icon
+         "disabled": "󱠱", // If script outputs "disabled", use this one
+         "default": "󱠱"      // Optional: An icon for any other output
+       },
+       "return-type": "json"
+
    },
    "tray":{
       "icon-size":16,
@@ -161,11 +174,17 @@
       "on-click-right":"pavucontrol",
       "tooltip-format":"{volume}%"
    },
+   "group/group-clock":{
+      "orientation":"inherit",
+      "modules":[
+          "custom/notifications",
+          "clock"
+      ]
+   },
    "group/group-applets":{
       "orientation":"inherit",
       "modules":[
-         "pulseaudio",
-         "backlight",
+         "custom/caffeine",
          "custom/touchscreen",
          "network"
       ]

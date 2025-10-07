@@ -1,9 +1,6 @@
 #!/bin/bash
 
 # --- Configuration ---
-# Your device name from `hyprctl devices`
-DEVICE_NAME="elan901c:00-04f3:4250"
-
 # We use a state file to track the toggle state
 STATE_FILE="/tmp/touchscreen.state"
 
@@ -14,18 +11,17 @@ if [ ! -f "$STATE_FILE" ]; then
     echo "enabled" > "$STATE_FILE"
 fi
 
+CURRENT_STATE=$(cat "$STATE_FILE")
+
 # Function to toggle the device state
 toggle_state() {
-    # Read the current state from our file
-    CURRENT_STATE=$(cat "$STATE_FILE")
-
     if [ "$CURRENT_STATE" = "enabled" ]; then
         # Disable it by passing the raw device name
-        hyprctl dispatch setprop enabled 0 "$DEVICE_NAME"
+        hyprctl keyword input:touchdevice:enabled false
         echo "disabled" > "$STATE_FILE"
     else
         # Enable it by passing the raw device name
-        hyprctl dispatch setprop enabled 1 "$DEVICE_NAME"
+        hyprctl keyword input:touchdevice:enabled true
         echo "enabled" > "$STATE_FILE"
     fi
 }
@@ -38,4 +34,4 @@ if [ "$1" = "toggle" ]; then
 fi
 
 # Finally, always output the current state for Waybar to read
-cat "$STATE_FILE"
+printf '{"alt": "%s"}\n' "$CURRENT_STATE"

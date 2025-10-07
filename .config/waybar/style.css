@@ -48,7 +48,7 @@ window#waybar {
   border: 1px solid @black;
 }
 
-#clock,
+#group-clock,
 #battery {
   color: #7f849c;
   background: black;
@@ -84,35 +84,8 @@ window#waybar {
   border: 1px solid @black;
 }
 
-#cpu,
-#memory,
-#disk,
-#custom-gpu-usage {
-  color: #7f849c;
-  background: black;
-  border-radius: 10px;
-  font-family: "Symbols Nerd Font";
-  font-size: 15px;
-  padding: 8px 11px 8px 11px;
-  margin: 10px 0px 10px 10px;
-  box-shadow: 0px 0px 3px rgba(0, 0, 0, 1);
-  border: 1px solid @black;
-}
-
-#network,
-#custom-touchscreen,
-#backlight,
-#pulseaudio {
-  color: #7f849c;
-  font-family: "Symbols Nerd Font";
-  font-size: 10pt;
-  margin: 0;
-  padding: 0 10px;
-}
-
-#pulseaudio.muted,
-#custom-touchscreen.disabled {
-  color: @brblack;
+#custom-notifications {
+  padding: 14px 20px 14px 5px;
 }
 
 #battery.charging {
@@ -130,4 +103,16 @@ window#waybar {
   margin: 10px 10px 10px 5px;
   box-shadow: 0px 0px 3px rgba(0, 0, 0, 1);
   border: 1px solid @black;
+}
+
+#group-applets > * > * {
+  color: #7f849c;
+  font-family: "Symbols Nerd Font";
+  font-size: 10pt;
+  margin: 0;
+  padding: 0 10px;
+}
+
+#custom-touchscreen.disabled {
+  color: @brblack;
 }
