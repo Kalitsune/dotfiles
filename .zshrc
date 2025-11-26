@@ -59,6 +59,8 @@ fetch
 
 # aliases
 source $HOME/.aliases
+source $HOME/.gitaliases
+
 alias zshconfig="nvim ~/.zshrc"
 alias fixyubikey="sudo systemctl restart pcscd.service"
 alias clear="clear && fetch"
@@ -77,6 +79,6 @@ compinit
 
 eval "$(register-python-argcomplete --no-defaults exegol)"
 
-export NVM_DIR="$HOME/.config//nvm"
+export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
