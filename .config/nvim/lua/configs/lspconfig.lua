@@ -1,18 +1,12 @@
-local nvlsp = require("nvchad.configs.lspconfig")
-local lspconfig = require("lspconfig")
+require("nvchad.configs.lspconfig").defaults()
 
-nvlsp.defaults() -- loads nvchad's defaults
-
-local servers = {
-	html = {},
-	cssls = {},
-	csharp_ls = {},
+local servers = { 
+    "html", "cssls", "clangd", "ts_ls", 
+    "tailwindcss", "svelte",
+    "lua_ls", "arduino_language_server", 
+    "rust_analyser", "gopls"
 }
+vim.lsp.enable(servers)
 
-for name, opts in pairs(servers) do
-	opts.on_init = nvlsp.on_init
-	opts.on_attach = nvlsp.on_attach
-	opts.capabilities = nvlsp.capabilities
+-- to configure lsps further read :h vim.lsp.config
 
-	lspconfig[name].setup(opts)
-end
