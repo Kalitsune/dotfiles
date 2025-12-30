@@ -15,11 +15,9 @@ local plugin = {
 				"markdown_inline",
 			},
 			auto_install = true,
+            highlight = { enable = true },
 			autotag = { enable = true },
 		},
-		config = function()
-			require("configs.highlighting")
-		end,
 	},
 }
 return plugin

@@ -9,8 +9,8 @@ ZSH_THEME=""
 
 # Setup the env.
 export ZSH="$HOME/.oh-my-zsh"
-export XDG_CONFIG_HOME="$HOME/.config/"
-export XDG_DATA_HOME="$HOME/.local/share/"
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
 
 # ZSH History
 HISTFILE="$HOME/.zsh_history"
@@ -18,35 +18,23 @@ HISTSIZE=10000
 SAVEHIST=10000
 setopt SHARE_HISTORY
 
-# Language related stuff
-export DOTNET_ROOT="$HOME/.dotnet/"
 
 # $PATH configuration
+# note: language-specific paths are located in .config/zsh/tools
 path+=("$HOME/.local/bin")
 path+=("$HOME/bin")
-path+=("$HOME/.local/bin/platform-tools")
-path+=("$HOME/.platformio/penv/bin")
-path+=("$HOME/.cargo/bin/")
-path+=("$HOME/go/bin/")
-path+=("$HOME/.dotnet/tools")
-path+=("$DOTNET_ROOT")
-export PATH
 
 export EDITOR="nvim"
 
 plugins=(
-  git
   git-auto-fetch
-  git-commit
-  gh
-  rust
+  gh # completions
+  rust # completions
   thefuck
-  nvm
-  aliases
-  kubectl
+  nvm # completions
+  aliases # `als`: lists the available aliases
   zsh-autosuggestions
   zsh-syntax-highlighting
-  qrcode
 )
 source $ZSH/oh-my-zsh.sh
 
@@ -57,28 +45,30 @@ fetch () {
 }
 fetch
 
-# aliases
-source $HOME/.aliases
-source $HOME/.gitaliases
+# zoxide (cd command on steroids)
+eval "$(zoxide init --cmd cd zsh)"
 
-alias zshconfig="nvim ~/.zshrc"
-alias fixyubikey="sudo systemctl restart pcscd.service"
-alias clear="clear && fetch"
-alias ls="lsd"
-alias exegol="sudo -E $(which exegol)"
-alias :q="exit"
+# open buffer line in editor 
+autoload -Uz edit-command-line
+zle -N edit-command-line
+bindkey '^x^e' edit-command-line
 
+# prompt
 autoload -U promptinit; promptinit
 prompt pure
-
-eval "$(zoxide init --cmd cd zsh)"
 
 # completions
 autoload -U compinit
 compinit
 
-eval "$(register-python-argcomplete --no-defaults exegol)"
+# misc zsh features
+autoload -Uz add-zsh-hook
 
-export NVM_DIR="$HOME/.config/nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# aliases
+source $XDG_CONFIG_HOME/zsh/aliases.zsh
+
+# run tools configuration
+source $XDG_CONFIG_HOME/zsh/load_tools.zsh
+
+# export the path, done here so that the tools configs can add stuff to it
+export PATH

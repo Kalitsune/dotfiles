@@ -9,11 +9,15 @@ local plugins = {
 	},
 	{
 		"wakatime/vim-wakatime",
-		lazy = false,
+        event = "BufEnter",
 	},
 	{
 		"christoomey/vim-tmux-navigator",
 		lazy = false,
 	},
+    {
+        "tpope/vim-surround",
+        event = "BufEnter",
+    },
 }
 return plugins

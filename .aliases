@@ -1,7 +1,0 @@
-alias ll="ls -la"
-alias la="ls -a"
-
-alias waybar="$HOME/.config/waybar/waybar.sh"
-
-alias ts="tailscale status"
-alias tsen="sudo tailscale set --exit-node"

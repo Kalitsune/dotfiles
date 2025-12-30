@@ -5,6 +5,7 @@ local options = {
 		html = { "prettier" },
 		js = { "prettier" },
 		ts = { "prettier" },
+        pas = { "pasfmt" }
 	},
 
 	format_on_save = {
