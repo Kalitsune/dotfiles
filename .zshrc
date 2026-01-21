@@ -48,10 +48,8 @@ fetch
 # zoxide (cd command on steroids)
 eval "$(zoxide init --cmd cd zsh)"
 
-# open buffer line in editor 
-autoload -Uz edit-command-line
-zle -N edit-command-line
-bindkey '^x^e' edit-command-line
+# load zsh widgets
+source $XDG_CONFIG_HOME/zsh/widgets.zsh
 
 # prompt
 autoload -U promptinit; promptinit

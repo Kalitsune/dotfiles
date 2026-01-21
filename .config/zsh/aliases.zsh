@@ -5,10 +5,6 @@ alias ls="lsd"
 alias ll="ls -la"
 alias la="ls -a"
 
-# tailscale
-alias ts="tailscale status"
-alias tsen="sudo tailscale set --exit-node"
-
 # vim addiction
 alias zshconfig="nvim ~/.zshrc"
 alias :q="exit"
