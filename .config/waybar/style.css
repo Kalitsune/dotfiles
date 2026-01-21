@@ -60,18 +60,6 @@ window#waybar {
   border: 1px solid @black;
 }
 
-#custom-launcher {
-  color: #7f849c;
-  background: black;
-  border-radius: 10px;
-  font-family: "Symbols Nerd Font";
-  font-size: 15px;
-  padding: 8px 11px 8px 11px;
-  margin: 10px 0px 10px 10px;
-  box-shadow: 0px 0px 3px rgba(0, 0, 0, 1);
-  border: 1px solid @black;
-}
-
 #custom-playerlabel {
   font-weight: bold;
   /* font-style: italic; */
@@ -111,6 +99,10 @@ window#waybar {
   font-size: 10pt;
   margin: 0;
   padding: 0 10px;
+}
+
+#bluetooth {
+  font-size: 13pt;
 }
 
 #custom-touchscreen.disabled {

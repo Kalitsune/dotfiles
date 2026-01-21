@@ -7,7 +7,6 @@
    "margin-left":0,
    "margin-right":0,
    "modules-left":[
-      // "custom/launcher",
       "hyprland/workspaces"
    ],
    "modules-center":[
@@ -22,7 +21,7 @@
       "interval":1,
       "tooltip":"false"
    },
-   "hyprland/workspaces":{
+   "hyprland/workspaces": {
       "disable-scroll":false,
       "on-scroll-up":"hyprctl dispatch workspace -1",
       "on-scroll-down":"hyprctl dispatch workspace +1",
@@ -50,7 +49,7 @@
          "critical":15
       },
       "format":"{icon}",
-      "format-charging":"󰂄",
+      "format-charging":"󰂄 <span font='JetbrainsMono'>{capacity}%</span>",
       "format-plugged":"󱐋",
       "format-alt":"{icon} <span font='JetbrainsMono'>{capacity}%</span>",
       "format-good":"{icon} <span font='JetbrainsMono'>{capacity}%</span>",
@@ -74,20 +73,16 @@
       "format-ethernet":"󰈀",
       "format-linked":"󰈀",
       "format-disconnected":"󰤭",
-      "format-alt":"󰈀: {ipaddr}/{cidr}",
-      "tooltip-format":"{essid}"
+      "format-alt":"󰤨 {essid}",
+      "tooltip-format":"{ipaddr}"
    },
    "bluetooth":{
       "format-on":"󰂯",
       "format-off":"󰂲",
       "format-connected":"󰂱",
       "format-disabled":"󰂲",
-      "on-click":"blueman-manager",
-      "on-click-right":"blueman-manager",
-      "format-device-preference":[
-         "device1",
-         "device2"
-      ],
+      "on-click":"blueberry",
+      "on-click-right":"blueberry",
       "tooltip-format":"{controller_alias}\t{controller_address}\n\n{num_connections} connected",
       "tooltip-format-connected":"{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
       "tooltip-format-enumerate-connected":"{device_alias}\t{device_address}",
@@ -99,7 +94,7 @@
       "format-icons":{
          "notification":"󰂚<span foreground='#DB4740'><sup></sup></span>",
          "none":"󰂚",
-         "dnd-notification":"󰂛<span foreground='#DB4740'><sup></sup></span>",
+         "dnd-notification":"󰂛<span foreground='#7f849c'><sup></sup></span>",
          "dnd-none":"󰂛",
          "inhibited-notification":"󰂚<span foreground='#DB4740'><sup></sup></span>",
          "inhibited-none":"󰂚",
@@ -139,41 +134,6 @@
        "return-type": "json"
 
    },
-   "tray":{
-      "icon-size":16,
-      "spacing":5,
-      "icons": {
-        "Nextcloud": "bluetooth"
-      }
-   },
-   "backlight":{
-      "device":"acpi_video1",
-      "format":"{icon}",
-      "format-icons":[
-         "󰃚",
-         "󰃛",
-         "󰃜",
-         "󰃝",
-         "󰃞",
-         "󰃟",
-         "󰃠"
-      ],
-      "tooltip-format":"{percent}%"
-   },
-   "pulseaudio":{
-      "format":"{icon}",
-      "format-muted":"󰝟",
-      "format-icons":{
-         "default":[
-            "󰕿",
-            "󰖀",
-            "󰕾"
-         ]
-      },
-      "on-click":"pavucontrol",
-      "on-click-right":"pavucontrol",
-      "tooltip-format":"{volume}%"
-   },
    "group/group-clock":{
       "orientation":"inherit",
       "modules":[
@@ -186,6 +146,7 @@
       "modules":[
          "custom/caffeine",
          "custom/touchscreen",
+         "bluetooth",
          "network"
       ]
    }
