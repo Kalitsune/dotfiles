@@ -10,7 +10,7 @@ echo -e "${BLUE}Setting up the terminal environment...${BLANK}"
 # install the packages
 source $SCRIPT_DIR/utils/packages-installer.sh
 
-deb_packages="npm zsh thefuck tealdeer fzf neovim python3-neovim tmux zoxide gh xdpyinfo lsd bat"
+deb_packages="npm zsh thefuck tealdeer fzf neovim python3-neovim tmux zoxide gh x11-utils lsd bat"
 rhl_packages="npm zsh thefuck tealdeer fzf neovim python3-neovim tmux zoxide gh xdpyinfo lsd bat"
 
 if [[ "$1" == "--skip-packages" ]]; then
