@@ -1,4 +1,4 @@
-local plugin = {
+return {
 	{
 		"stevearc/conform.nvim",
 		event = "BufWritePre",
@@ -7,4 +7,3 @@ local plugin = {
 		end,
 	},
 }
-return plugin

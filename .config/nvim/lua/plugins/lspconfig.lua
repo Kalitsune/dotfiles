@@ -1,7 +1,4 @@
-local plugins = {
-	{
-		"williamboman/mason.nvim",
-	},
+return {
     {
       "neovim/nvim-lspconfig",
        config = function()
@@ -9,4 +6,3 @@ local plugins = {
        end,
     },
 }
-return plugins

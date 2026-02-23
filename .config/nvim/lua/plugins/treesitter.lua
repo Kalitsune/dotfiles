@@ -1,4 +1,4 @@
-local plugin = {
+return {
 	{
 		"nvim-treesitter/nvim-treesitter",
 		dependencies = {
@@ -20,4 +20,3 @@ local plugin = {
 		},
 	},
 }
-return plugin

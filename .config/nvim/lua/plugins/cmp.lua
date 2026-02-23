@@ -1,4 +1,4 @@
-local plugin = {
+return {
 	{
 		"hrsh7th/nvim-cmp",
 		-- load cmp on InsertEnter
@@ -18,4 +18,3 @@ local plugin = {
 		-- },
 	},
 }
-return plugin

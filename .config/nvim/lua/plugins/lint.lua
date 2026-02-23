@@ -1,4 +1,4 @@
-local plugin = {
+return {
 	{
 		"mfussenegger/nvim-lint",
 		event = "VeryLazy",
@@ -7,4 +7,3 @@ local plugin = {
 		end,
 	},
 }
-return plugin

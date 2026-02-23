@@ -3,6 +3,7 @@ require('lint').linters_by_fr = {
     typescript = {'eslint'},
     -- text = { "vale", },
     -- markdown = { "vale", },
+
 }
 
 vim.api.nvim_create_autocmd({ "BufWritePost" }, {
