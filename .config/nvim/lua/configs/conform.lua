@@ -6,6 +6,8 @@ return {
 		js = { "prettier" },
 		ts = { "prettier" },
 		typst = { "typstyle" },
+		java = { "clang-format" },
+		c = { "clang-format" },
 	},
 
 	format_on_save = {

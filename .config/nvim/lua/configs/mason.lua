@@ -3,5 +3,6 @@ return {
 	ensure_installed = {
 		"stylua",
 		"typstyle",
+		"clang-format",
 	},
 }
