@@ -88,6 +88,17 @@
       "tooltip-format-enumerate-connected":"{device_alias}\t{device_address}",
       "tooltip-format-enumerate-connected-battery":"{device_alias}\t{device_address}\t{device_battery_percentage}%"
    },
+   "power-profiles-daemon": {
+      "format": "{icon}",
+      "tooltip-format": "Power profile: {profile}nDriver: {driver}",
+      "tooltip": true,
+      "format-icons": {
+        "default": "",
+        "performance": "",
+        "balanced": "",
+        "power-saver": ""
+      }
+   },
    "custom/notifications":{
       "tooltip":false,
       "format":"{icon}",
@@ -147,7 +158,8 @@
          "custom/caffeine",
          "custom/touchscreen",
          "bluetooth",
-         "network"
+         "network",
+         "power-profiles-daemon",
       ]
    }
 }
