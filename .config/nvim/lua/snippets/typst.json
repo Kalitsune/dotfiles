@@ -1,0 +1,22 @@
+{
+  "Header": {
+    "prefix": "\\head",
+    "body": [
+        "#set page(paper: \"a4\")",
+        "#set heading(numbering: \"1.\")",
+        "",
+        ""
+    ],
+    "description": "File Header"
+  },
+  "Function": {
+    "prefix": "\\fun",
+    "body": [
+        "#let $0($1) = {}",
+        "#set heading(numbering: \"1.\")",
+        "",
+        ""
+    ],
+    "description": "File Header"
+  },
+}

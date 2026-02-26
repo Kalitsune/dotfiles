@@ -1,11 +1,11 @@
-local options = {
+return {
 	formatters_by_ft = {
 		lua = { "stylua" },
 		css = { "prettier" },
 		html = { "prettier" },
 		js = { "prettier" },
 		ts = { "prettier" },
-        pas = { "pasfmt" }
+		typst = { "typstyle" },
 	},
 
 	format_on_save = {
@@ -14,5 +14,3 @@ local options = {
 		lsp_fallback = true,
 	},
 }
-
-require("conform").setup(options)
