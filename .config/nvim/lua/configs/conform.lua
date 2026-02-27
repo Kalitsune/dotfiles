@@ -8,6 +8,7 @@ return {
 		typst = { "typstyle" },
 		java = { "clang-format" },
 		c = { "clang-format" },
+		make = { "mbake" },
 	},
 
 	format_on_save = {
