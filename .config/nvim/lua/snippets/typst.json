@@ -2,8 +2,11 @@
   "Header": {
     "prefix": "\\head",
     "body": [
-        "#set page(paper: \"a4\")",
+        "#set page(paper: \"a4\", numbering: \"1\")",
         "#set heading(numbering: \"1.\")",
+        "",
+        "#show ref: content => underline(content)",
+        "#show link: content => underline(content)",
         "",
         ""
     ],
@@ -12,11 +15,33 @@
   "Function": {
     "prefix": "\\fun",
     "body": [
-        "#let $0($1) = {}",
-        "#set heading(numbering: \"1.\")",
-        "",
-        ""
+        "#let ${0:name}(${1:args}) = {",
+        "    $2",
+        "}"
     ],
-    "description": "File Header"
+    "description": "Creates a new function"
   },
+  "Cover": {
+      "prefix": "\\cover",
+      "body": [
+          "#align(center + horizon)[",
+          "  #v(2in) // Add vertical space from the top",
+          "  #text(size: 24pt, weight: \"bold\")[",
+          "    $(0:Title of my document)",
+          "  ]",
+          "",
+          "  #v(1in)",
+          "  #text(size: 16pt)[",
+          "    $(1: Author NAME)",
+          "  ]",
+          "",
+          "  #v(1in)",
+          "  #text(size: 12pt, fill: gray)[",
+          "    Submission Date: #datetime.today().display()",
+          "  ]",
+          "]",
+          "#pagebreak()",
+          "$2"
+      ]
+  }
 }

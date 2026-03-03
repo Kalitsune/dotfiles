@@ -30,6 +30,7 @@ vim.api.nvim_create_autocmd("BufWritePost", {
 vim.api.nvim_create_autocmd("BufEnter", {
 	pattern = { "*.typ" },
 	callback = function(event)
-		map("n", "<leader>oo", ":TypstPreviewToggle<cr>", { buffer = event.buf, desc = "📄 Open Typst Preview" })
+		map("n", "<leader>oo", ":TypstPreviewToggle<cr>", { buffer = event.buf, desc = "Typst: Open Preview" })
+		map("n", "<leader>sc", ":TypstPreviewSyncCursor<cr>", { buffer = event.buf, desc = "Typst: Sync Cursor" })
 	end,
 })
