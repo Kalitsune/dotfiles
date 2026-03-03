@@ -5,8 +5,11 @@ alias ls="lsd"
 alias ll="ls -la"
 alias la="ls -a"
 
-# vim addiction
+# dotfiles
 alias zshconfig="nvim ~/.zshrc"
+alias zshreload="source ~/.zshrc"
+
+# vim addiction
 alias :q="exit"
 
 # fixes
