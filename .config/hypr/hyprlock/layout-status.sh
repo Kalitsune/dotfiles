@@ -1,4 +1,4 @@
 #!/bin/sh
 
-layout="$(bat /etc/vconsole.conf | grep XKBLAYOUT | awk -F'=' '{print toupper($2)}')"
+layout="$(hyprctl devices | rg "active keymap" | head -n 1 | awk -F': ' '{print $2}')"
 printf "%s   " "$layout"

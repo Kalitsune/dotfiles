@@ -3,8 +3,8 @@
 # status="$(acpi -b | grep -ioh "\w*charging\w*")"
 # level="$(acpi -b | grep -o -P "[0-9]+(?=%)")"
 
-status="$(cat /sys/class/power_supply/BAT1/status)"
-level="$(cat /sys/class/power_supply/BAT1/capacity)"
+status="$(cat /sys/class/power_supply/BAT0/status)"
+level="$(cat /sys/class/power_supply/BAT0/capacity)"
 
 if [[ ("$status" == "Discharging") || ("$status" == "Full") ]]; then
   if [[ "$level" -eq "0" ]]; then
