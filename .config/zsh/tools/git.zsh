@@ -15,7 +15,8 @@ alias gss="gs --short"
 
 # commits
 alias gc="git commit"
-alias gca="git commit --amend --no-edit"
+alias gcamd="git commit --amend --no-edit"
+alias gcm="git commit -m \"🪼Merged diverging branches\""
 
 # push
 alias gp="git push"

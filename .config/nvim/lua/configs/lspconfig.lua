@@ -15,8 +15,12 @@ local servers = {
 	"gopls", -- golang
 	"tinymist", -- typst
 	"just-lsp", -- just build system
+	"qmlls", -- QML markup language (used by quickshell)
 }
 
-vim.lsp.enable(servers)
-
 -- use vim.lsp.config(name, opts) for extra setings
+
+vim.lsp.config("qmlls", { cmd = { "qmlls", "-E" } })
+
+-- Enable the servers
+vim.lsp.enable(servers)
