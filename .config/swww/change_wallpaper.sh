@@ -1,7 +1,13 @@
 #!/bin/bash
 
 #start swww
-WALLPAPERS_DIR=~/.config/swww/wallpapers/$(cat ~/.config/swww/.collection)
+COLLECTION=$(cat ~/.config/swww/.collection)
+if [ ! $COLLECTION ]; then
+   COLLECTION="vibrant-nature";
+   echo -e "$COLLECTION" > ~/.config/swww/.collection;
+fi
+
+WALLPAPERS_DIR=~/.config/swww/wallpapers/
 CURR_WALLPAPER_PATH=~/.cache/wallpaper.img
 WALLPAPER=$(find "$WALLPAPERS_DIR" -type f \( -name "*.png" -or -name "*.jpg" -or -name "*.gif" \) | shuf -n 1)
 
