@@ -1,0 +1,11 @@
+[Unit]
+Description=Sets up a high-speed connection in between the ipad and this device
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=%h/.config/scripts/in_ipad.sh
+ExecStop=%h/.config/scripts/out_ipad.sh
+
+[Install]
+WantedBy=default.target

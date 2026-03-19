@@ -16,7 +16,7 @@ alias gss="gs --short"
 # commits
 alias gc="git commit"
 alias gcamd="git commit --amend --no-edit"
-alias gcm="git commit -m \"🪼Merged diverging branches\""
+alias gcmrg="git commit -m \"🪼Merged diverging branches\""
 
 # push
 alias gp="git push"
@@ -35,6 +35,8 @@ ABBREVIATIONS=(
   "gcfox" "git commit -m \"🩹 fix(|): \""
   "gcch"  "git commit -m \"🧹 chore: |\""
   "gccoh" "git commit -m \"🧹 chore(|): \""
+  "gcrf"  "git commit -m \"♻️ refactor: |\""
+  "gcrof" "git commit -m \"♻️ refactor(|): \""
   "gcdc"  "git commit -m \"📖 docs: |\""
   "gcdoc" "git commit -m \"📖 docs(|): \""
   "gcts"  "git commit -m \"🧪 test: |\""
