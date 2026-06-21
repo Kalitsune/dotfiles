@@ -1,0 +1,26 @@
+[Unit]
+Description=Sets up a high-speed connection in between the ipad and this device
+After=graphical-session.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+Environment=XDG_RUNTIME_DIR=/run/user/1000
+ExecStartPre=/bin/sleep 3
+ExecStart=%h/.config/scripts/in_ipad.sh
+ExecStop=%h/.config/scripts/out_ipad.sh
+
+# # # # # # # # # # # # # # # # # # # # #
+# NOTE                                  #
+# # # # # # # # # # # # # # # # # # # # #
+#
+# THIS REQUIRES THE FOLLOWING UDEV RULE: 
+# $ cat /etc/udev/rules.d/96-ipad.rules
+# ACTION=="add",    SUBSYSTEM=="usb",  ATTR{idVendor}=="05ac", ATTR{idProduct}=="12ab", RUN+="/usr/bin/systemctl --user --machine=kalitsune@ start ipad-weylus.service"
+# ACTION=="remove", SUBSYSTEM=="net",  ENV{ID_VENDOR_ID}=="05ac", ENV{ID_MODEL_ID}=="12ab", RUN+="/usr/bin/systemctl --user --machine=kalitsune@ stop ipad-weylus.service"
+#
+# AS WELL AS THE FOLLOWING LINE: (required because of some usbmuxd bug I didn't want to solve)
+# $ sudo visudo -f /etc/sudoers.d/usbmuxd
+# kalitsune ALL=(ALL) NOPASSWD: /usr/bin/systemctl restart usbmuxd
+#
+# # # # # # # # # # # # # # # # # # # # #

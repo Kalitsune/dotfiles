@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Hardcode the absolute path to bypass systemd's stripped environment
-export HYPRLAND_INSTANCE_SIGNATURE=$(ls -1 /run/user/$(id -u)/hypr | head -n 1)
-
-# Remove the output
-hyprctl output remove ipad
+for i in $(seq 1 10); do
+    hyprctl --instance 0 output remove ipad && break
+    echo "hyprctl attempt $i failed, retrying..."
+    sleep 1
+done

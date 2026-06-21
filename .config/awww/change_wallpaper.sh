@@ -1,13 +1,13 @@
 #!/bin/bash
 
-#start swww
-COLLECTION=$(cat ~/.config/swww/.collection)
+#start awww
+COLLECTION=$(cat ~/.config/awww/.collection)
 if [ ! $COLLECTION ]; then
    COLLECTION="vibrant-nature";
-   echo -e "$COLLECTION" > ~/.config/swww/.collection;
+   echo -e "$COLLECTION" > ~/.config/awww/.collection;
 fi
 
-WALLPAPERS_DIR=~/.config/swww/wallpapers/$COLLECTION
+WALLPAPERS_DIR=~/.config/awww/wallpapers/$COLLECTION
 CURR_WALLPAPER_PATH=~/.cache/wallpaper.img
 CURR_WALLPAPER_COMPAT="$CURR_WALLPAPER_PATH.png" #for compatibility
 
@@ -32,7 +32,7 @@ case $XDG_CURRENT_DESKTOP in
     };;
 
     'Hyprland') {
-        swww img "$WALLPAPER"
+        awww img "$WALLPAPER"
     };;
 esac
 

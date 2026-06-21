@@ -2,8 +2,16 @@
   "Header": {
     "prefix": "\\head",
     "body": [
+        "#import \"@preview/numbly:0.1.0\": numbly",
+        "",
         "#set page(paper: \"a4\", numbering: \"1\")",
-        "#set heading(numbering: \"1.\")",
+        "#set heading(numbering: numbly(",
+        "    \"{1}.\",",
+        "    \"{1}.{2}.\",",
+        "    \"{2}.{3:a}.\",",
+        "    \"{2}.{3:a}.{4}.\",",
+        "    \"{2}.{3:a}.{4}.{5:a}.\",",
+        "))",
         "#set text(font: \"SF Pro Text\")",
         "",
         "#show ref: content => underline(content)",
